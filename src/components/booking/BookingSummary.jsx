@@ -12,7 +12,7 @@ import {
   AlertDialogTitle,
   AlertDialogDescription,
 } from "@/components/ui/Pop-up-box";
-import { BookingWidget } from "@/components/booking/bookingWidget";
+import { BookingWidget } from "@/components/booking/BookingWidget";
 import { useBookingStore } from "@/store/booking-store";
 
 const TRIP_LABELS = {

@@ -1,0 +1,208 @@
+export const routes = [
+  {
+    id: "route-nashik-mumbai",
+    slug: "nashik-to-mumbai-cab",
+    origin: "Nashik",
+    destination: "Mumbai",
+    distanceKm: 168,
+    durationLabel: "3h 30m",
+    startingFare: 2599,
+    availableCategories: ["Sedan", "Premium Sedan", "SUV", "MUV"],
+    overview:
+      "The Nashik to Mumbai route runs along the Mumbai-Agra Highway (NH60/NH160), a smooth four-lane stretch that most Mira cars cover in around three and a half hours outside peak hours.",
+    travelTips: [
+      "Start before 6 AM to avoid Kasara Ghat congestion.",
+      "Kasara Ghat has scenic viewpoints — good for a short photo stop.",
+      "Carry ID proof; toll plazas occasionally have vehicle checks.",
+    ],
+    pickupPoints: [
+      "Nashik Road Station",
+      "College Road",
+      "Nashik City Centre",
+      "Ozar Airport",
+    ],
+    destinationHighlights: [
+      "Mumbai Airport (T1/T2)",
+      "Bandra-Kurla Complex",
+      "Mumbai Central",
+      "Andheri",
+    ],
+  },
+  {
+    id: "route-mumbai-nashik",
+    slug: "mumbai-to-nashik-cab",
+    origin: "Mumbai",
+    destination: "Nashik",
+    distanceKm: 168,
+    durationLabel: "3h 30m",
+    startingFare: 2599,
+    availableCategories: ["Sedan", "Premium Sedan", "SUV", "MUV"],
+    overview:
+      "Travelling from Mumbai to Nashik is a popular weekend and pilgrimage route, well served by Mira's outstation fleet with transparent, all-inclusive fares.",
+    travelTips: [
+      "Avoid leaving Mumbai after 5 PM on Fridays — expressway traffic builds up quickly.",
+      "Food plazas near Igatpuri are a good midway break.",
+      "Book round-trip if you plan to return within 2-3 days for better pricing.",
+    ],
+    pickupPoints: ["Mumbai Airport", "Dadar", "Thane", "Borivali"],
+    destinationHighlights: [
+      "Nashik City",
+      "Trimbakeshwar Temple",
+      "Sula Vineyards",
+      "Nashik Road Station",
+    ],
+  },
+  {
+    id: "route-nashik-pune",
+    slug: "nashik-to-pune-cab",
+    origin: "Nashik",
+    destination: "Pune",
+    distanceKm: 210,
+    durationLabel: "4h 15m",
+    startingFare: 3199,
+    availableCategories: ["Sedan", "SUV", "MUV"],
+    overview:
+      "The Nashik-Pune corridor connects Maharashtra's two fastest-growing cities via NH60, popular for business travel and college commutes.",
+    travelTips: [
+      "Ahmednagar bypass saves close to 20 minutes versus the old city route.",
+      "Carry cash for smaller toll booths that occasionally have FASTag scanner delays.",
+    ],
+    pickupPoints: ["Nashik City Centre", "Nashik Road Station", "Ozar Airport"],
+    destinationHighlights: [
+      "Pune Station",
+      "Hinjewadi IT Park",
+      "Pune Airport",
+      "Shivaji Nagar",
+    ],
+  },
+  {
+    id: "route-pune-mumbai",
+    slug: "pune-to-mumbai-cab",
+    origin: "Pune",
+    destination: "Mumbai",
+    distanceKm: 150,
+    durationLabel: "3h 10m",
+    startingFare: 2399,
+    availableCategories: ["Hatchback", "Sedan", "Premium Sedan", "SUV"],
+    overview:
+      "One of India's busiest intercity routes, the Pune-Mumbai Expressway journey is fast, scenic through the Western Ghats, and available round-the-clock with Mira.",
+    travelTips: [
+      "Expressway is faster than the old Mumbai-Pune highway — always confirm your driver takes it.",
+      "Lonavala makes a great short break roughly halfway.",
+    ],
+    pickupPoints: ["Pune Station", "Hinjewadi", "Pune Airport", "Kothrud"],
+    destinationHighlights: ["Mumbai Airport", "Dadar", "Navi Mumbai", "Thane"],
+  },
+  {
+    id: "route-nashik-shirdi",
+    slug: "nashik-to-shirdi-cab",
+    origin: "Nashik",
+    destination: "Shirdi",
+    distanceKm: 90,
+    durationLabel: "1h 50m",
+    startingFare: 1699,
+    availableCategories: ["Hatchback", "Sedan", "SUV", "Tempo Traveller"],
+    overview:
+      "A short, comfortable pilgrimage route to the Sai Baba Temple, frequently booked as a same-day return trip.",
+    travelTips: [
+      "Early morning departure (before 7 AM) helps you beat temple queues.",
+      "Tempo Travellers are ideal for family or group darshan trips.",
+    ],
+    pickupPoints: ["Nashik City Centre", "Nashik Road Station"],
+    destinationHighlights: ["Sai Baba Temple", "Shirdi Bus Stand", "Dwarkamai"],
+  },
+  {
+    id: "route-mumbai-airport-nashik",
+    slug: "mumbai-airport-to-nashik-cab",
+    origin: "Mumbai Airport",
+    destination: "Nashik",
+    distanceKm: 180,
+    durationLabel: "3h 45m",
+    startingFare: 2799,
+    availableCategories: ["Sedan", "Premium Sedan", "SUV"],
+    overview:
+      "Landing at Mumbai and heading straight to Nashik? Mira tracks your flight and adjusts pickup timing automatically at no extra cost.",
+    travelTips: [
+      "Share your flight number at booking — our team monitors delays.",
+      "Meet-and-greet pickup available at both T1 and T2.",
+    ],
+    pickupPoints: ["Terminal 1", "Terminal 2"],
+    destinationHighlights: ["Nashik City", "College Road", "Trimbakeshwar"],
+  },
+  {
+    id: "route-pune-airport-nashik",
+    slug: "pune-airport-to-nashik-cab",
+    origin: "Pune Airport",
+    destination: "Nashik",
+    distanceKm: 215,
+    durationLabel: "4h 20m",
+    startingFare: 3299,
+    availableCategories: ["Sedan", "SUV", "MUV"],
+    overview:
+      "Direct, no-transfer cab service from Pune Airport to Nashik, ideal for business travellers and family visits alike.",
+    travelTips: [
+      "Peak evening flights should book at least 6 hours in advance for guaranteed availability.",
+    ],
+    pickupPoints: ["Pune Airport Terminal"],
+    destinationHighlights: [
+      "Nashik City",
+      "Nashik Road Station",
+      "Ozar Airport",
+    ],
+  },
+  {
+    id: "route-nashik-aurangabad",
+    slug: "nashik-to-aurangabad-cab",
+    origin: "Nashik",
+    destination: "Aurangabad",
+    distanceKm: 180,
+    durationLabel: "3h 40m",
+    startingFare: 2799,
+    availableCategories: ["Sedan", "SUV", "MUV"],
+    overview:
+      "Connects two major historical and industrial hubs, popular for both business trips and Ajanta-Ellora sightseeing extensions.",
+    travelTips: ["Vaijapur is a convenient mid-route stop for food and fuel."],
+    pickupPoints: ["Nashik City Centre", "Nashik Road Station"],
+    destinationHighlights: [
+      "Aurangabad City",
+      "Bibi Ka Maqbara",
+      "Aurangabad Airport",
+    ],
+  },
+  {
+    id: "route-mumbai-lonavala",
+    slug: "mumbai-to-lonavala-cab",
+    origin: "Mumbai",
+    destination: "Lonavala",
+    distanceKm: 83,
+    durationLabel: "1h 50m",
+    startingFare: 1599,
+    availableCategories: ["Hatchback", "Sedan", "SUV"],
+    overview:
+      "A quick monsoon-getaway favourite — hill views, waterfalls, and a smooth expressway ride from Mumbai.",
+    travelTips: [
+      "Weekend traffic near Khopoli exit can add 20-30 minutes — plan accordingly.",
+    ],
+    pickupPoints: ["Mumbai Airport", "Thane", "Navi Mumbai"],
+    destinationHighlights: ["Tiger Point", "Bhushi Dam", "Lonavala Market"],
+  },
+  {
+    id: "route-pune-mahabaleshwar",
+    slug: "pune-to-mahabaleshwar-cab",
+    origin: "Pune",
+    destination: "Mahabaleshwar",
+    distanceKm: 120,
+    durationLabel: "2h 45m",
+    startingFare: 2199,
+    availableCategories: ["Sedan", "SUV", "MUV"],
+    overview:
+      "A favourite hill-station escape from Pune, winding through the Western Ghats with cool weather and strawberry farms along the way.",
+    travelTips: ["Carry a light jacket — evenings get cool even in summer."],
+    pickupPoints: ["Pune Station", "Pune Airport", "Hinjewadi"],
+    destinationHighlights: ["Wilson Point", "Venna Lake", "Mapro Garden"],
+  },
+];
+
+export function getRouteBySlug(slug) {
+  return routes.find((route) => route.slug === slug);
+}

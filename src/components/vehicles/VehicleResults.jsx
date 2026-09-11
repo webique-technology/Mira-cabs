@@ -1,8 +1,9 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { SlidersHorizontal, Tag, Sparkles } from "lucide-react";
+import { SlidersHorizontal, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -19,7 +20,6 @@ import { VehicleCardSkeleton } from "@/components/common/LoadingSkeleton";
 import { useBookingStore } from "@/store/booking-store";
 import { calculateFare, getVehicles } from "@/services/vehicle-service";
 import { getRoutes } from "@/services/route-service";
-import { getOffers } from "@/services/booking-service";
 import { resolveDays, resolveDistanceKm } from "@/lib/fare-helpers";
 
 export function VehicleResults({ showFilters = true }) {
@@ -30,14 +30,12 @@ export function VehicleResults({ showFilters = true }) {
   const [loading, setLoading] = useState(true);
   const [vehicles, setVehicles] = useState([]);
   const [routes, setRoutes] = useState([]);
-  const [offer, setOffer] = useState(null);
   const [filters, setFilters] = useState({});
   const [sort, setSort] = useState("recommended");
   const [selectingId, setSelectingId] = useState(null);
 
   useEffect(() => {
     getRoutes().then(setRoutes);
-    getOffers().then((offers) => setOffer(offers[0] ?? null));
   }, []);
 
   useEffect(() => {
@@ -56,12 +54,15 @@ export function VehicleResults({ showFilters = true }) {
 
   const distanceKm = useMemo(
     () => (search ? resolveDistanceKm(search, routes) : 0),
-    [search, routes]
+    [search, routes],
   );
-  
+
   const days = useMemo(() => {
     if (!search) return 1;
-    if (search.tripType === "tour-package" && search.packageDetails?.durationDays) {
+    if (
+      search.tripType === "tour-package" &&
+      search.packageDetails?.durationDays
+    ) {
       return search.packageDetails.durationDays;
     }
     return resolveDays(search);
@@ -108,22 +109,13 @@ export function VehicleResults({ showFilters = true }) {
             </div>
           </div>
           <span className="rounded-lg bg-white px-3 py-1 text-xs font-bold text-secondary-800 shadow-sm">
-            {search.packageDetails.durationDays} Days / {search.packageDetails.durationNights} Nights
+            {search.packageDetails.durationDays} Days /{" "}
+            {search.packageDetails.durationNights} Nights
           </span>
         </div>
       )}
 
       <BookingSummary search={search} />
-
-      {/* {offer ? (
-        <div className="flex items-center gap-3 rounded-2xl border border-dashed border-primary-300 bg-primary-50 px-4 py-3 text-sm">
-          <Tag className="h-4 w-4 shrink-0 text-primary-700" />
-          <p className="text-secondary-800">
-            Use code <span className="font-bold">{offer.couponCode}</span> at
-            checkout for {offer.discountLabel.toLowerCase()}.
-          </p>
-        </div>
-      ) : null} */}
 
       <div className="flex flex-wrap items-center justify-between gap-3">
         <p className="text-sm text-muted-foreground">

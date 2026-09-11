@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import { X, ArrowLeft } from "lucide-react";
 import { OTPInput } from "input-otp";
 import {

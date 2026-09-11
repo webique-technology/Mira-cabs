@@ -1,10 +1,10 @@
 import {
   BadgeCheck,
-  CalendarCheck2,
-  Car,
+  // CalendarCheck2,
+  // Car,
   CreditCard,
-  MapPin,
-  ShieldCheck,
+  // MapPin,
+  // ShieldCheck,
   Sparkles,
   Timer,
 } from "lucide-react";

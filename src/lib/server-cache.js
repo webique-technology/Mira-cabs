@@ -10,8 +10,8 @@ export async function getOrSet(key, ttlMs, fn) {
   const value = await fn();
   try {
     store.set(key, { value, expiry: now + ttlMs });
-  } catch (e) {
-    // Ignore cache set failures
+  } catch {
+    // Optional catch binding ignores cache write errors cleanly without unused vars
   }
   return value;
 }

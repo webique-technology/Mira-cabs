@@ -3,16 +3,16 @@
 import { useState } from "react";
 import { ArrowRight, CheckCircle2, Lock, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+// import { cn } from "@/lib/utils";
 
-const SERVICE_CHIPS = [
-  "Outstation Cab",
-  "Airport Transfer",
-  "Corporate Tie-up",
-  "Tour Packages",
-  "Feedback / Lost Item",
-  "Driver Partner",
-];
+// const SERVICE_CHIPS = [
+//   "Outstation Cab",
+//   "Airport Transfer",
+//   "Corporate Tie-up",
+//   "Tour Packages",
+//   "Feedback / Lost Item",
+//   "Driver Partner",
+// ];
 
 const VEHICLE_CATEGORIES = [
   "Sedan (Dzire / Etios) • 4 Seater",
@@ -23,7 +23,7 @@ const VEHICLE_CATEGORIES = [
 ];
 
 export function ContactFormClient() {
-  const [selectedService, setSelectedService] = useState("Outstation Cab");
+  // const [selectedService, setSelectedService] = useState("Outstation Cab");
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
